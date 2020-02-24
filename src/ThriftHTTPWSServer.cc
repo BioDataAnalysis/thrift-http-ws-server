@@ -1,27 +1,9 @@
 //
-// Developed for BioDataAnalysis GmbH <info@biodataanalysis.de>
-//               Balanstrasse 43, 81669 Munich
-//               https://www.biodataanalysis.de/
-//
-// Copyright (c) BioDataAnalysis GmbH. All Rights Reserved.
-//
-// Redistribution and use in source and binary forms, with or without
-// modification, are not permitted. All information contained herein
-// is, and remains the property of BioDataAnalysis GmbH.
-// Dissemination of this information or reproduction of this material
-// is strictly forbidden unless prior written permission is obtained
-// from BioDataAnalysis GmbH.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-//
 // Copyright (c) 2016-2019 Vinnie Falco (vinnie dot falco at gmail dot com)
 //
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
-// This file is based on boost::beast example: Advanced server, flex (plain + SSL)
 // Official repository: https://github.com/boostorg/beast
 //
 
