@@ -1,0 +1,49 @@
+# Pipelines are made of one or more jobs and may include resources and variables.
+# Jobs are made of one or more steps plus some job-specific data. Steps can be
+# tasks, scripts, or references to external templates.
+
+jobs:
+  - job: Linux
+    pool:
+      vmImage: 'ubuntu-18.04'
+    strategy:
+      maxParallel: 2
+    steps:
+        # NOTE: On Linux, there is no write permission in the miniconda installation
+        # directory. Therefore we need to create our own conda environment from scratch.
+      - script: |
+          mkdir build || exit 1
+          cd build || exit 1
+          echo "Will start the cmake configuration" || exit 1
+          cmake .. || exit 1
+          echo "Will start the cmake based build" || exit 1
+          cmake --build . --config Release || exit 1
+          echo "Completed script successfully" || exit 1
+  - job: macOS
+    pool:
+      vmImage: 'macOS-latest'
+    strategy:
+      maxParallel: 2
+    steps:
+      - script: |
+          mkdir build || exit 1
+          cd build || exit 1
+          echo "Will start the cmake configuration" || exit 1
+          cmake .. || exit 1
+          echo "Will start the cmake based build" || exit 1
+          cmake --build . --config Release || exit 1
+          echo "Completed script successfully" || exit 1
+  - job: Windows
+    pool:
+      vmImage: 'windows-latest'
+    strategy:
+      maxParallel: 2
+    steps:
+      - script: |
+          mkdir build || exit 1
+          cd build || exit 1
+          echo "Will start the cmake configuration" || exit 1
+          cmake .. || exit 1
+          echo "Will start the cmake based build" || exit 1
+          cmake --build . --config Release || exit 1
+          echo "Completed script successfully" || exit 1

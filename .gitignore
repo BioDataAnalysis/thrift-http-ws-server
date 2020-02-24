@@ -1,0 +1,14 @@
+*~
+*.swp
+*.swo
+*.class
+*.db
+*.iml
+*.ipr
+*.iws
+.DS_Store
+.idea/*
+/test/gen-cpp
+/browser-nodejs/src/gen-nodejs
+/browser-nodejs/dist
+/browser-nodejs/node_modules
